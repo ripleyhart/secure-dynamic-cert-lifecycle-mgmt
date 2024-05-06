@@ -9,7 +9,7 @@ The purpose of this repository is to provide examples, tools, and operators for 
     * GitLab 
     * GitHub
     * Other
-* Kubernetes Cluster
+* Kubernetes Cluster (OpenShift)
   * [Code Ready Containers (CRC)](https://developers.redhat.com/download-manager/link/3868678)
     * [CRC Direct Mirror](https://mirror.openshift.com/pub/openshift-v4/clients/crc/latest/)
   * xKS
