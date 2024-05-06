@@ -1,0 +1,21 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: le-wc-prod
+  namespace: cert-manager
+spec:
+  secretName: le-wc-prod
+  issuerRef:
+    name: the-issuer
+    kind: Issuer
+  commonName: '*.domain-of-authenticity.hartripley.com'
+  dnsNames:
+  - domain-of-authenticity.hartripley.com
+  - '*.domain-of-authenticity.hartripley.com'
+  acme:
+    config:
+    - dns01:
+        provider: azuredns
+      domains:
+      - domain-of-authenticity.hartripley.com
+      - '*.domain-of-authenticity.hartripley.com'

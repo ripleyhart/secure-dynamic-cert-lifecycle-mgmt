@@ -1,0 +1,23 @@
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: the-cluster-issuer
+spec:
+  acme:
+    server: https://acme-staging-v02.api.letsencrypt.org/directory #Staging ACME URL
+    email: hart@hartripley.com
+    privateKeySecretRef:
+      name: cluster-issuer-letsencrypt-staging
+    solvers:
+    - dns01:
+        cnameStrategy: Follow 
+        azureDNS:
+          clientID: $AZURE_CERT_MANAGER_SP_APP_ID
+          clientSecretSecretRef:
+            name: azuredns-config
+            key: azuredns-sp-secret
+          hostedZoneName: $AZURE_DNS_ZONE
+          resourceGroupName: $AZURE_DNS_ZONE_RESOURCE_GROUP
+          subscriptionID: $AZURE_SUBSCRIPTION_ID
+          tenantID: $AZURE_TENANT_ID
+          environment: AzurePublicCloud

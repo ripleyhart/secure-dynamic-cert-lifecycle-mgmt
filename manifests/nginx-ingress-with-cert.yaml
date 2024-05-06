@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nginx
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    cert-manager.io/cluster-issuer: the-cluster-issuer
+spec:
+  rules:
+  - host: app.domain-of-authenticity.hartripley.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: app-service
+            port:
+              number: 80
+  tls:
+  - hosts:
+    - app.domain-of-authenticity.hartripley.com
