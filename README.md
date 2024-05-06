@@ -9,9 +9,10 @@ The purpose of this repository is to provide examples, tools, and operators for 
     * GitLab 
     * GitHub
     * Other
-* Kubernetes Cluster (OpenShift)
-  * [Code Ready Containers (CRC)](https://developers.redhat.com/download-manager/link/3868678)
-    * [CRC Direct Mirror](https://mirror.openshift.com/pub/openshift-v4/clients/crc/latest/)
+* Kubernetes Cluster
+  * OpenShift 
+    * [Code Ready Containers (CRC)](https://developers.redhat.com/download-manager/link/3868678)
+      * [CRC Direct Mirror](https://mirror.openshift.com/pub/openshift-v4/clients/crc/latest/)
   * xKS
     * [Amazon EKS](https://github.com/hashicorp/learn-terraform-provision-eks-cluster)
     * [Azure AKS](https://github.com/hashicorp/learn-terraform-provision-aks-cluster)
